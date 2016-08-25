@@ -1,0 +1,154 @@
+fileFormatVersion: 2
+guid: 096f3c3b9a9e041dbb37fc8ec7384a86
+timeCreated: 1467179386
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: musicbox_0
+    21300002: musicbox_1
+    21300004: musicbox_2
+    21300006: musicbox_3
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 200
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: musicbox_0
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 378
+        width: 352
+        height: 288
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 114, y: 144}
+        - {x: -130, y: 144}
+        - {x: -130, y: 18}
+        - {x: -144, y: 18}
+        - {x: -146, y: 16}
+        - {x: -146, y: -30}
+        - {x: -176, y: -30}
+        - {x: -176, y: -50}
+        - {x: -162, y: -50}
+        - {x: -162, y: -80}
+        - {x: -160, y: -82}
+        - {x: -146, y: -82}
+        - {x: -146, y: -144}
+        - {x: 176, y: -144}
+        - {x: 176, y: 2}
+        - {x: 114, y: 2}
+    - name: musicbox_1
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 342
+        width: 320
+        height: 255
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 98, y: 127.5}
+        - {x: -146, y: 127.5}
+        - {x: -146, y: 34.5}
+        - {x: -160, y: 34.5}
+        - {x: -160, y: -127.5}
+        - {x: 160, y: -127.5}
+        - {x: 160, y: 18.5}
+        - {x: 98, y: 18.5}
+    - name: musicbox_2
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 40
+        width: 352
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 162, y: 112}
+        - {x: 160, y: 114}
+        - {x: 130, y: 114}
+        - {x: 130, y: 128}
+        - {x: -130, y: 128}
+        - {x: -130, y: 34}
+        - {x: -144, y: 34}
+        - {x: -146, y: 32}
+        - {x: -146, y: -14}
+        - {x: -176, y: -14}
+        - {x: -176, y: -34}
+        - {x: -162, y: -34}
+        - {x: -162, y: -64}
+        - {x: -160, y: -66}
+        - {x: -146, y: -66}
+        - {x: -146, y: -128}
+        - {x: 176, y: -128}
+        - {x: 176, y: 18}
+        - {x: 162, y: 18}
+    - name: musicbox_3
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 104
+        width: 80
+        height: 48
+      alignment: 9
+      pivot: {x: 0.9849518, y: 0.024556318}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -78.79614, y: 46.821297}
+        - {x: -78.79614, y: 27.821297}
+        - {x: -64.79614, y: -1.1787033}
+        - {x: 1.2038574, y: -1.1787033}
+        - {x: 1.2038574, y: 16.821297}
+        - {x: -43.796143, y: 46.821297}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
