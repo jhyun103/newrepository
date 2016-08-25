@@ -5,9 +5,12 @@ using System.Collections.Generic;
 public class CollectedItems : MonoBehaviour {
 
 	public List<GameObject> collectedItems;
+	public Vector2[] posOffsets;
+
 	GameObject player;
 	GameObject lastItem;
-	Vector2 posOffset = new Vector2(-0.75f,1.00f);
+	int collectionTier = 1;
+	int offsetIndex = 0;
 
 	void Awake()
 	{
@@ -41,45 +44,47 @@ public class CollectedItems : MonoBehaviour {
 		{
 			/*Flag item as collected to avoid repeat calls*/
 			itemScript.Collected = true;
+
+			/*Add object to list of collectedObjects*/
+			this.collectedItems.Add(obj);
+
 			Vector2 newPos = new Vector2();
 
 			/*Set position offset for item -*/
-			if(lastItem == null)
-			{
-				//If there is no last item, this is the first item so do offset from player
-				newPos = new Vector2 (player.transform.position.x + posOffset.x, player.transform.position.y + posOffset.y);
-				//Set the item's offset
-				itemScript.posOffset = posOffset;
-				//Set the item's temporary target position
-				itemScript.targetPos = newPos;
-				//set the item's refObject - the player in this case
-				itemScript.refObj = player;
-				//Call object's GetCollected method 
-				itemScript.GetCollected();
-			}
-			else
-			{
-				//There is a last item so calculate offset from it's position
-				newPos = new Vector2 (lastItem.transform.position.x + posOffset.x, lastItem.transform.position.y + posOffset.y);
-				//Set the item's offset
-				itemScript.posOffset = posOffset;
-				//Set the item's temporary target position
-				itemScript.targetPos = newPos;
-				//set the item's refObject - the player in this case
-				itemScript.refObj = lastItem;
+			//Determine bounce direction
+			Vector2 currentOffset = posOffsets [offsetIndex] * collectionTier;
+			offsetIndex++;
+
+			//establish target position
+			Vector2 currPos = new Vector2(this.gameObject.transform.position.x, this.gameObject.transform.position.y);
+			Vector2 targetPos = new Vector2(currPos.x + currentOffset.x, currPos.y + currentOffset.y); //target position is current position plus bounce
+
+			//If there is no last item, this is the first item so do offset from player
+			newPos = targetPos;
+			//Set the item's offset
+			itemScript.posOffset = currentOffset;
+			//Set the item's temporary target position
+			itemScript.targetPos = newPos;
+			//set the item's refObject - the player in this case
+			itemScript.refObj = player;
+			//Call object's GetCollected method 
+			itemScript.GetCollected();
+
+			if (lastItem != null){
 				//set the lastItem's child object to be the current object for updating when objects are removed
 				lastItem.GetComponent<CollectableItem>().childObj = itemScript.gameObject;
-				//Call object's GetCollected method 
-				itemScript.GetCollected();
 			}
 
 			/*set last item to current*/
 			lastItem = obj;
 
-			/*Add object to list of collectedObjects*/
-			this.collectedItems.Add(obj);
 			//Set object's item index- it's place in the list
 			itemScript.ItemIndex = this.collectedItems.Count-1;
+
+			if (collectedItems.Count % posOffsets.Length == 0) {
+				collectionTier++;
+				offsetIndex = 0;
+			}
 		}
 		else
 		{
