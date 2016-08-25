@@ -51,7 +51,6 @@ public class CollectedItems : MonoBehaviour {
 			Vector2 newPos = new Vector2();
 
 			/*Set position offset for item -*/
-			//Determine bounce direction
 			Vector2 currentOffset = posOffsets [offsetIndex] * collectionTier;
 			offsetIndex++;
 
